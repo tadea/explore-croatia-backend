@@ -1,0 +1,2 @@
+class FavBeach < ApplicationRecord
+end
