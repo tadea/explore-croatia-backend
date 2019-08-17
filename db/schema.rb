@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2019_08_15_031330) do
   create_table "beaches", force: :cascade do |t|
     t.string "name"
     t.string "location"
-    t.string "type"
+    t.string "beach_type"
     t.string "summary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
