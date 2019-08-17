@@ -1,0 +1,26 @@
+USER
+has_many: fav_beaches
+has_many: beaches, through: :fav_beaches
+
+*Attributes*
+* name -string
+* username -string
+* password -password_digest
+
+
+BEACHES
+has_many: fav_beaches
+has_many: users, through: :fav_beaches
+
+*Attributes*
+* name -string
+* location -string
+* type -string
+* summary -string
+
+
+FAV_BEACHES
+belongs_to :user -integer   
+belongs_to :beach -integer
+
+

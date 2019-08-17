@@ -1,2 +1,0 @@
-class FavBeachesController < ApplicationController
-end
