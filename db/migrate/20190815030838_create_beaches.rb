@@ -3,7 +3,7 @@ class CreateBeaches < ActiveRecord::Migration[5.2]
     create_table :beaches do |t|
       t.string :name
       t.string :location
-      t.string :type
+      t.string :beach_type
       t.string :summary
 
       t.timestamps
