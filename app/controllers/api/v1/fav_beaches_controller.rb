@@ -2,8 +2,15 @@ class Api::V1::FavBeachesController < ApplicationController
     before_action :find_fav_beach
 
     def index
-        @fav_beaches = FavBeach.all
-        render json: @fav_beaches
+        if logged_in?
+            @fav_beaches = current_user.fav_beaches
+            render json: @fav_beaches
+        else
+            render json: {
+                error "You must be logged in to see your Favorite Beaches"
+            }
+        end
+
     end
 
     def show
